@@ -1,16 +1,18 @@
 package com.training.taskManagementSystem.service;
 
 import com.training.taskManagementSystem.model.Task;
-import java.util.List;
+import org.springframework.http.ResponseEntity;
 
 public interface TaskService {
-    List<Task> getAllTasks();
+    ResponseEntity<?> getAllTasks();
 
-    Task getTaskById(Long id);
+    ResponseEntity<?> getTaskById(Long id);
 
-    Task createTask(Task task);
+    ResponseEntity<?> createTask(Task task);
 
-    Task updateTask(Long id, Task updatedTask);
+    ResponseEntity<?> updateTask(Long id, Task updatedTask);
 
-    boolean deleteTask(Long id);
+	ResponseEntity<?> markTaskAsCompleted(Long id, boolean completed);
+	
+	ResponseEntity<?> deleteTask(Long id);
 }

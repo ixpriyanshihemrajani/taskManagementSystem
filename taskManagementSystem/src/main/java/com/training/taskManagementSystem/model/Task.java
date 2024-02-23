@@ -22,7 +22,7 @@ public class Task {
 	@Column(name = "DUE_DATE")
     private Date dueDate;
 	@Column(name = "IS_COMPLETED")
-    private boolean completed;
+    private boolean isCompleted;
     
 	public Task() {
     }
@@ -32,7 +32,7 @@ public class Task {
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
-        this.completed = completed;
+        this.isCompleted = completed;
     }
 
     // Getters and setters
@@ -69,10 +69,10 @@ public class Task {
     }
 
     public boolean isCompleted() {
-        return completed;
+        return isCompleted;
     }
 
     public void setCompleted(boolean completed) {
-        this.completed = completed;
+        this.isCompleted = completed;
     }
 }
